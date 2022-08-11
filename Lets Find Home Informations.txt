@@ -1,0 +1,55 @@
+LETS FIND HOME 1.0
+
+Softwares and Frameworks Used
+
+1. Microsoft Visual Studio 2019 Version 16.11.0
+2. Bunifu Framework 5.0.9
+3. ITextSharp 5.5.13.2 
+4. SQL Server Management Studio 18.9.2
+5. Microsoft Interop.Excel.dll
+
+Overall Project Features are mentioned in the Project Proposal.
+
+Installation Guide:
+
+Go to Lets Find Home->LFH->Debug->Setup.exe
+
+After Installing, Open the software by clicking the shortcut in the desktop.
+
+User Guide:
+
+1. Go to Home Page and click on the Join as Renter Button and fill the form to become a member
+2. Go to Home Page and click on the Join as Renter Button and fill the form to become a member
+3. You can see the ads as a guest by clicking the see the ads Button
+4. You can login to the system and edit the profile. You have to select your user type before logging in
+5. House Owners can post ads and they have to attach photos of their interior and correct informations in the boxes
+6. House Owner can negotiate over the chatbox option
+7. You can pay the rent as a renter in two ways bKash or Cards
+8. House Owner can see the payments he got from renters in the manage payment section. 
+9. House Owner can give notice in the notice section to a specific member.
+10.Any Members can contact admin if they face any harrasment in the admin support section
+11.Admin needs to approve ads from the approve ads section of admin before they go public.
+12.Admin can also delete unwanted Ads from the Delete Ads Section
+13.Admin can block members based on complain
+14.If you are blocked then you are unable to use the functionalities so you have to request for unblock in the Admin Support.
+15.Admin Can Unblock Members if he wishes. 
+
+
+Developed By:
+
+1. SHAMSUN NAHAR       -> 17-33792-1
+2. RIFAT AHMED         -> 19-41107-2
+3. ABIDUR RAHMAN NABIL -> 19-41607-3
+
+Project Limitations:
+
+1. It is not an web based application
+2. Our user interface is not that upper high level.
+
+Supervised By:
+
+MD. NAZMUL HOSSAIN
+Lecturer
+American International University Bangladesh
+
+We want to dedicate our project to our honourable Sir. Who worked tiredlessly throughout the semester to teach us everything.

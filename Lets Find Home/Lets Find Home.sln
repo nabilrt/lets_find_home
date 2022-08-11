@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lets Find Home", "Lets Find Home\Lets Find Home.csproj", "{7D5B3AEB-FF89-46BE-83BF-FE2EFEBB900B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LFH", "LFH\LFH.vdproj", "{99955279-A198-4FE3-8B38-CF59A2889CD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D5B3AEB-FF89-46BE-83BF-FE2EFEBB900B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5B3AEB-FF89-46BE-83BF-FE2EFEBB900B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5B3AEB-FF89-46BE-83BF-FE2EFEBB900B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5B3AEB-FF89-46BE-83BF-FE2EFEBB900B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99955279-A198-4FE3-8B38-CF59A2889CD3}.Debug|Any CPU.ActiveCfg = Debug
+		{99955279-A198-4FE3-8B38-CF59A2889CD3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FFA5293-F6F2-4760-BBBE-39C7F32D1625}
+	EndGlobalSection
+EndGlobal

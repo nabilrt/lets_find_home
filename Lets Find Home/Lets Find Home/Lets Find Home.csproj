@@ -1,0 +1,820 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D5B3AEB-FF89-46BE-83BF-FE2EFEBB900B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lets_Find_Home</RootNamespace>
+    <AssemblyName>Lets Find Home</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.1.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.1.8\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.1.8\lib\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=5.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Users\ASUS VivoBook\Downloads\Compressed\Microsoft.Office.Interop.Excel\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdApproval.Designer.cs">
+      <DependentUpon>AdApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdsUploaded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdsUploaded.Designer.cs">
+      <DependentUpon>AdsUploaded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BKashGateway.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BKashGateway.Designer.cs">
+      <DependentUpon>BKashGateway.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlockRenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlockRenter.Designer.cs">
+      <DependentUpon>BlockRenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardGateWay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardGateWay.Designer.cs">
+      <DependentUpon>CardGateWay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Complains.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Complains.Designer.cs">
+      <DependentUpon>Complains.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAds.Designer.cs">
+      <DependentUpon>DeleteAds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditHOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditHOwner.Designer.cs">
+      <DependentUpon>EditHOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRenter.Designer.cs">
+      <DependentUpon>EditRenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralAds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralAds.Designer.cs">
+      <DependentUpon>GeneralAds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HOAdminSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOAdminSupport.Designer.cs">
+      <DependentUpon>HOAdminSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouseDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HouseDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HouseDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HouseDatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HouseDatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HouseDatabaseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDatabaseDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HouseDatabaseDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDatabaseDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HouseDatabaseDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HouseDatabaseDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwnerChattinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouseOwnerChattinh.Designer.cs">
+      <DependentUpon>HouseOwnerChattinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwnerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouseOwnerDashboard.Designer.cs">
+      <DependentUpon>HouseOwnerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwnerNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouseOwnerNotice.Designer.cs">
+      <DependentUpon>HouseOwnerNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouseOwnerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouseOwnerRegistration.Designer.cs">
+      <DependentUpon>HouseOwnerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerPaymentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerPaymentHistory.Designer.cs">
+      <DependentUpon>OwnerPaymentHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostAds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostAds.Designer.cs">
+      <DependentUpon>PostAds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentedHouses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentedHouses.Designer.cs">
+      <DependentUpon>RentedHouses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterAdminSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenterAdminSupport.Designer.cs">
+      <DependentUpon>RenterAdminSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterandAds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenterandAds.Designer.cs">
+      <DependentUpon>RenterandAds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterChatting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenterChatting.Designer.cs">
+      <DependentUpon>RenterChatting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenterDashboard.Designer.cs">
+      <DependentUpon>RenterDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterNotices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenterNotices.Designer.cs">
+      <DependentUpon>RenterNotices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenterRegistration.Designer.cs">
+      <DependentUpon>RenterRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentersinHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentersinHouse.Designer.cs">
+      <DependentUpon>RentersinHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenterTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenterTransaction.Designer.cs">
+      <DependentUpon>RenterTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentHouse.Designer.cs">
+      <DependentUpon>RentHouse.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdApproval.resx">
+      <DependentUpon>AdApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdsUploaded.resx">
+      <DependentUpon>AdsUploaded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BKashGateway.resx">
+      <DependentUpon>BKashGateway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlockRenter.resx">
+      <DependentUpon>BlockRenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardGateWay.resx">
+      <DependentUpon>CardGateWay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Complains.resx">
+      <DependentUpon>Complains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAds.resx">
+      <DependentUpon>DeleteAds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditHOwner.resx">
+      <DependentUpon>EditHOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRenter.resx">
+      <DependentUpon>EditRenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralAds.resx">
+      <DependentUpon>GeneralAds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOAdminSupport.resx">
+      <DependentUpon>HOAdminSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouseOwnerChattinh.resx">
+      <DependentUpon>HouseOwnerChattinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouseOwnerDashboard.resx">
+      <DependentUpon>HouseOwnerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouseOwnerNotice.resx">
+      <DependentUpon>HouseOwnerNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouseOwnerRegistration.resx">
+      <DependentUpon>HouseOwnerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerPaymentHistory.resx">
+      <DependentUpon>OwnerPaymentHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostAds.resx">
+      <DependentUpon>PostAds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RentedHouses.resx">
+      <DependentUpon>RentedHouses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterAdminSupport.resx">
+      <DependentUpon>RenterAdminSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterandAds.resx">
+      <DependentUpon>RenterandAds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterChatting.resx">
+      <DependentUpon>RenterChatting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterDashboard.resx">
+      <DependentUpon>RenterDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterNotices.resx">
+      <DependentUpon>RenterNotices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterRegistration.resx">
+      <DependentUpon>RenterRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentersinHouse.resx">
+      <DependentUpon>RentersinHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenterTransaction.resx">
+      <DependentUpon>RenterTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentHouse.resx">
+      <DependentUpon>RentHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="HouseDatabaseDataSet.xsc">
+      <DependentUpon>HouseDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HouseDatabaseDataSet.xss">
+      <DependentUpon>HouseDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet1.xsc">
+      <DependentUpon>HouseDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HouseDatabaseDataSet1.xss">
+      <DependentUpon>HouseDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet2.xsc">
+      <DependentUpon>HouseDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HouseDatabaseDataSet2.xss">
+      <DependentUpon>HouseDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet3.xsc">
+      <DependentUpon>HouseDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HouseDatabaseDataSet3.xss">
+      <DependentUpon>HouseDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet4.xsc">
+      <DependentUpon>HouseDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HouseDatabaseDataSet4.xss">
+      <DependentUpon>HouseDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet5.xsc">
+      <DependentUpon>HouseDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDatabaseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HouseDatabaseDataSet5.xss">
+      <DependentUpon>HouseDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet6.xsc">
+      <DependentUpon>HouseDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDatabaseDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HouseDatabaseDataSet6.xss">
+      <DependentUpon>HouseDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet7.xsc">
+      <DependentUpon>HouseDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HouseDatabaseDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HouseDatabaseDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HouseDatabaseDataSet7.xss">
+      <DependentUpon>HouseDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webaliser-_TPTXZd9mOo-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\big-house-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1714077.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No_Image_Available.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinClipart.com_washer-and-dryer-clip_3911495.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vote_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paomedia-Small-N-Flat-Sign-error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-8-Accept.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart2003061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart365252.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart381637.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-house-425x326.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngaaa.com-3748358.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart2403134.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart26515.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart1003811.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart10038111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart518294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart19063.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart131680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_admin-png_2636271.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unfollow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngaaa.com-4808230.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngaaa.com-365837.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngaaa.com-2823040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngaaa.com-2538672.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngaaa.com-2538682.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_owner-icon-png_4304198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slidebank+login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\House-PNG-Image-Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_processing20191128-24941-zbq3ty.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-ok-anim.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_bdXe_NSI74RUNRjL_.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tenant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Online-Payment-Icon-Background-PNG-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BKash-Logo.wine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-discover-the-best-credit-card-for-you-credit-card-802x1183.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-house-renting-u51fau79dfu623f-home-a-house-for-rent-5a7af1aa40ddd3.7294568315180066982657.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-ads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brush-PNG-Pic-Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\345376_client_user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgot-password-icon-18355 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG22_02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addstudent.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addstudent1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f31d0cb23b24612152812cd4eb903557.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aiub-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pbackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\273-2738804_php-login-and-authentication-login-hd-png-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeekPng.com_advertising-icon-png_3270103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\497-4977572_live-chat-support-percakapan-wa-vector-hd-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-401632936-artificial-intelligence-virtual-chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicePng_shivsena-png_3656133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
